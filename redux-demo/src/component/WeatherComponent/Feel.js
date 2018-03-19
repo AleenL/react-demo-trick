@@ -1,23 +1,22 @@
 //import React 
 import React from 'react'
-import { render } from 'react-dom'
+
 
 class Feel extends React.Component{
 	constructor(props) {
 		super(props);
 		this.state={
 			tmp: this.props.tmp,
-			feel: null
-		}
+			feel: null        
+		}   
 	}
 
-	componentDidUpdate(nextProps, nextState){
-		if(this.props.tmp !== nextProps.tmp)	
-			this.feelLike(this.props.tmp)
+	componentDidMount(){    
+		console.log(this.props.tmp)
+		this.feelLike(this.props.tmp)
 	}
 
 	feelLike(tmp){
-		console.log(tmp)
 		if(tmp>30){
 			this.setState({
 				feel:'炎热'
@@ -26,7 +25,7 @@ class Feel extends React.Component{
 			this.setState({
 				feel:'舒适'
 			})
-		}else if(tmp<10 && tmp<=20){
+		}else if(tmp>10 && tmp<=20){，
 			this.setState({
 				feel:'凉爽'
 			})
