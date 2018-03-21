@@ -3,7 +3,7 @@ import '../../public/css/index.pcss'
 import Seconds from '../common/seconds'
 
 
-const Index = ()=>
-    <Seconds title='商城'/>
+const Index = ()=> <Seconds title='商城'/>;
+
 
 export default Index;
