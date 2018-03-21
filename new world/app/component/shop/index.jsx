@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../public/css/index.pcss'
-import Seconds from '../../common/seconds'
+import Seconds from '../common/seconds'
 
 
 const Index = ()=>

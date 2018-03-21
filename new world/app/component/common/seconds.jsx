@@ -1,9 +1,9 @@
 import React from 'react'
 import SecondsBottom from './secondCount'
 import SecondsTop from './SecondsTop'
-import {urlParam,isMobile} from "../public/js/utils";
+import {urlParam,isMobile} from "../../public/js/utils";
 import "babel-polyfill";
-import apiRequestAsync from '../public/js/apiRequestAsync';
+import apiRequestAsync from '../../public/js/apiRequestAsync';
 
 
 export default class Seconds extends React.Component{
@@ -32,11 +32,11 @@ export default class Seconds extends React.Component{
 
     async handleIpDress() {
         let todoList = await apiRequestAsync.get('todoList');
-        console.log(todoList);
+        this.setState({data:todoList.list})
         let todoList2 = await apiRequestAsync.get('todoList');
-        console.log(todoList2)
+        this.setState({data:this.state.data.concat(todoList2.list)})
         let todoList3 = await apiRequestAsync.get('todoList');
-        console.log(todoList3)
+        this.setState({data:this.state.data.concat(todoList3.list)})
     }
 
     componentWillUnmount(){
@@ -61,15 +61,8 @@ export default class Seconds extends React.Component{
             <div className="cont">
                 <div className="top">
                     <SecondsTop title={this.props.title}/>
-                    <p>这个网页的路径是：{urlParam('name')}</p>
-                    {
-                        data.map((data)=>(
-                            <li key={data.id}>
-                                <p>今天我们来到了</p>
-                                <a href="">{data.title}</a>
-                            </li>
-                        ))
-                    }
+                    <p>这个网页的路径是22：{urlParam('name')}</p>
+
                 </div>
                 <div>
                     <input type="text" onChange={this.isMobile.bind(this)}/>
