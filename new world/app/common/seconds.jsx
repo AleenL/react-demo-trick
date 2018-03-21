@@ -33,7 +33,7 @@ export default class Seconds extends React.Component{
 
     componentDidMount(){
         this.interval = setInterval(() => this.tick(),1000)
-        apiRequest.get('ipDress', data => console.log(data.code), data => console.log(data.code))
+        apiRequest.get('ipDress',{}, data => console.log(data.code))
     }
 
     componentWillUnmount(){
