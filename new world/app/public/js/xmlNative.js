@@ -1,4 +1,4 @@
-const xmlNative = (opt,type) => {
+const xmlNative = (opt, type) => {
     opt = opt || {};
     opt.method = opt.method.toUpperCase() || 'POST';
     opt.url = opt.url || '';
@@ -20,34 +20,34 @@ const xmlNative = (opt,type) => {
         xmlHttp.open(opt.method, opt.url + '?' + postData, opt.async);
         xmlHttp.send(null);
     }
-    if(type === 1){
-        return new Promise((resolve,reject) => {
+    if (type === 1) {
+        return new Promise((resolve, reject) => {
             xmlHttp.onreadystatechange = () => {
-                if(xmlHttp.readyState === 4){
-                    if(xmlHttp.status === 200){
+                if (xmlHttp.readyState === 4) {
+                    if (xmlHttp.status === 200) {
                         let responseText = JSON.parse(xmlHttp.responseText);
-                        if(responseText.code === 0){
+                        if (responseText.code === 0) {
                             resolve(responseText.data)
-                        }else{
+                        } else {
                             reject(responseText.message)
                         }
-                    }else{
-                        reject(JSON.parse(xmlHttp.responseText),xmlHttp.status)
+                    } else {
+                        reject(JSON.parse(xmlHttp.responseText), xmlHttp.status)
                     }
                 }
-            }
+            };
         })
-    }else{
+    } else {
         xmlHttp.onreadystatechange = () => {
-            if(xmlHttp.readyState ===4){
-                if(xmlHttp.status === 200){
+            if (xmlHttp.readyState === 4) {
+                if (xmlHttp.status === 200) {
                     opt.success(JSON.parse(xmlHttp.responseText), xmlHttp.status)
-                }else{
+                } else {
                     opt.error(JSON.parse(xmlHttp.responseText), xmlHttp.status)
                 }
             }
-        }
+        };
     }
-}
 
+};
 export default xmlNative

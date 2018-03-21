@@ -2,7 +2,8 @@ import React from 'react'
 import SecondsBottom from './secondCount'
 import SecondsTop from './SecondsTop'
 import {urlParam,isMobile} from "../public/js/utils";
-import apiRequest from '../public/js/apiRequest'
+import "babel-polyfill";
+import apiRequestAsync from '../public/js/apiRequestAsync';
 
 
 export default class Seconds extends React.Component{
@@ -11,15 +12,7 @@ export default class Seconds extends React.Component{
         this.state={
             seconds:0,
             data:[
-                {id: 1, title: '前端人人1'},
-                {id: 2, title: '前端人人2'},
-                {id: 3, title: '前端人人3'},
-                {id: 4, title: '前端人人4'},
-                {id: 5, title: '前端人人5'},
-                {id: 6, title: '前端人人6'},
-                {id: 7, title: '前端人人7'},
-                {id: 8, title: '前端人人8'},
-                {id: 9, title: '前端人人9'}
+
             ],
             show:'',
         }
@@ -33,7 +26,17 @@ export default class Seconds extends React.Component{
 
     componentDidMount(){
         this.interval = setInterval(() => this.tick(),1000)
-        apiRequest.get('ipDress',{}, data => console.log(data.code))
+        this.handleIpDress()
+
+    }
+
+    async handleIpDress() {
+        let todoList = await apiRequestAsync.get('todoList');
+        console.log(todoList);
+        let todoList2 = await apiRequestAsync.get('todoList');
+        console.log(todoList2)
+        let todoList3 = await apiRequestAsync.get('todoList');
+        console.log(todoList3)
     }
 
     componentWillUnmount(){
