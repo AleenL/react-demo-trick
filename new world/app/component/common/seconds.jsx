@@ -7,8 +7,8 @@ import apiRequestAsync from '../../public/js/apiRequestAsync';
 
 
 export default class Seconds extends React.Component{
-    constructor(...args){
-        super(...args);
+    constructor(props){
+        super(props);
         this.state={
             seconds:0,
             data:[
@@ -59,16 +59,7 @@ export default class Seconds extends React.Component{
         const {seconds,data,show} = this.state;
         return (
             <div className="cont">
-                <div className="top">
-                    <SecondsTop title={this.props.title}/>
-                    <p>这个网页的路径是22：{urlParam('name')}</p>
-
-                </div>
-                <div>
-                    <input type="text" onChange={this.isMobile.bind(this)}/>
-                    <p>这个{show}手机号</p>
-                </div>
-                <SecondsBottom seconds={this.state.seconds}/>
+                <SecondsTop {...this.props} />
                 <SecondsBottom seconds={seconds}/>
             </div>
         )

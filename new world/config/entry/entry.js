@@ -12,6 +12,13 @@ let entry = [
         title:'商城',
         keywords:'这儿是个商城',
         description:'这是我们的商城'
+    },
+    {
+        name:'demo',
+        path:'demo/index.jsx',
+        title:'演示',
+        keywords:'演示，xxx',
+        description:'这是我们的演示'
     }
 ];
 
