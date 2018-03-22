@@ -11,7 +11,7 @@ const ajax = (url, method, data, successCB, errorCB) => {
         url: url,
         data: dataJson,
         success: (data, status) => {
-            if (data.code === 0) {
+            if (data.code === 0 || data.status) {
                 successCB && successCB(data, status)
             } else {
                 errorCB ? errorCB(data, status) : console.log(data, status)

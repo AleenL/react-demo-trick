@@ -12,6 +12,7 @@ const xmlNative = (opt, type) => {
         xmlHttp.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
         xmlHttp.send(JSON.stringify(opt.data));
     } else if (opt.method.toUpperCase() === 'GET') {
+        console.log(opt.data)
         let params = [];
         for (let key in opt.data) {
             params.push(key + '=' + opt.data[key]);
@@ -26,7 +27,7 @@ const xmlNative = (opt, type) => {
                 if (xmlHttp.readyState === 4) {
                     if (xmlHttp.status === 200) {
                         let responseText = JSON.parse(xmlHttp.responseText);
-                        if (responseText.code === 0) {
+                        if (responseText.code === 0 || responseText.status) {
                             resolve(responseText.data)
                         } else {
                             reject(responseText.message)

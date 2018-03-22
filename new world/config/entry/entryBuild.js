@@ -12,9 +12,7 @@ const entryContent = (data) => {
         `import React from 'react';
 import ReactDOM from 'react-dom';
 import Index from '../app/component/${data.path}';
-import Header from '../app/component/common/Header';
-import Footer from '../app/component/common/Footer';
-ReactDOM.render([<Header key="Header"/>,<Index key="Index"/>,<Footer key="Footer"/>],document.getElementById('app'));`
+ReactDOM.render([<Index key="Index"/>],document.getElementById('app'));`
     )
 };
 /*生成webpack entry 入口文件*/

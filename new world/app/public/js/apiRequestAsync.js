@@ -2,14 +2,14 @@ import xmlNative from './xmlNative'
 import apiManager from './apiManager'
 
 const ajax = (url, method, data) => {
-    let dataJson = {
-        version: "1.0.0",
-        data: data
-    };
+    // let dataJson = {
+    //     version: "1.0.0",
+    //     data: data
+    // };
     return xmlNative({
         method: method,
         url: url,
-        data: dataJson
+        data: data
     }, 1);
 };
 const apiRequestAsync = {

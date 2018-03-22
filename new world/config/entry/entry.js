@@ -2,23 +2,23 @@ let entry = [
     {
         name:'index',
         path:'index/index.jsx',
-        title:'首页',
-        keywords:'这儿是个首页',
-        description:'这是我们的首页'
+        title:'天气',
+        keywords:'这是一个天气页面',
+        description:'这边将展示一个天气'
     },
     {
-        name:'shop',
-        path:'shop/index.jsx',
-        title:'商城',
-        keywords:'这儿是个商城',
-        description:'这是我们的商城'
+        name:'movie',
+        path:'movie/index.jsx',
+        title:'电影',
+        keywords:'这儿是个电影显示',
+        description:'这边将展示一个电影'
     },
     {
-        name:'demo',
-        path:'demo/index.jsx',
-        title:'演示',
-        keywords:'演示，xxx',
-        description:'这是我们的演示'
+        name:'md',
+        path:'md/index.jsx',
+        title:'makedown',
+        keywords:'这是一个makedown页面',
+        description:'这边将展示一个makedown页面'
     }
 ];
 
