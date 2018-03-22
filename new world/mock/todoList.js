@@ -12,5 +12,4 @@ Mock.mock(/\/todoList.mock/, {
     },
     'message': '操作成功',
     'systemDate': new Date().getTime(),
-    'code':0
 });
