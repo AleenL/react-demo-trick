@@ -7,18 +7,18 @@ let entry = [
         description:'这边将展示一个天气'
     },
     {
-        name:'movie',
-        path:'movie/index.jsx',
-        title:'电影',
-        keywords:'这儿是个电影显示',
-        description:'这边将展示一个电影'
+        name:'login',
+        path:'login/index.jsx',
+        title:'登录页',
+        keywords:'这是一个登录页面',
+        description:'登录页面'
     },
     {
-        name:'md',
+        name:'to',
         path:'md/index.jsx',
-        title:'makedown',
-        keywords:'这是一个makedown页面',
-        description:'这边将展示一个makedown页面'
+        title:'登录页',
+        keywords:'这是一个登录页面',
+        description:'登录页面'
     }
 ];
 

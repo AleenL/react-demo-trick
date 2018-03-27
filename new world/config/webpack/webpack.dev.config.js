@@ -36,6 +36,7 @@ let config = merge(baseWebpackConfig, {
             chunks: ['vendor']
         }),
     ],
+
     module: {
         rules: [
             {
@@ -44,7 +45,8 @@ let config = merge(baseWebpackConfig, {
                     loader: 'bundle-loader',
                     options: {
                         lazy:true,
-                        name: '[name]'
+                        name: '[name]',
+                        query: {presets: ['es2015', 'react'] }
                     }
                 }
             },
@@ -53,6 +55,7 @@ let config = merge(baseWebpackConfig, {
                 use: [
                     'cache-loader',
                     'babel-loader',
+
                 ],
                 include: [
                     path.resolve(__dirname, "../../app"),
@@ -99,6 +102,7 @@ let config = merge(baseWebpackConfig, {
             },
         ]
     },
+
     /*设置api转发*/
     devServer: {
         host: '0.0.0.0',

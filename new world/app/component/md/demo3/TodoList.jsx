@@ -2,12 +2,16 @@ import React from 'react';
 import {Component} from 'refast';
 // 引入 logic.js
 import logic from './logic';
-
+import apiReauestAsync  from '../../../public/js/apiRequestAsync'
+import AV from '../../../public/js/leanCloud'
 
 class TodoList extends Component {
     constructor(props){
         super(props,logic)//隔离开
     }
+
+
+
 
     render(){
         let {list} = this.state;
