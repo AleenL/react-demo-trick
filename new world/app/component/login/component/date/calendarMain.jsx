@@ -75,13 +75,13 @@ export default class CalendarMain extends React.Component {
             <table className="calendarMain">
                 <thead>
                 <tr>
-                    <th>日</th>
-                    <th>一</th>
-                    <th>二</th>
-                    <th>三</th>
-                    <th>四</th>
-                    <th>五</th>
-                    <th>六</th>
+                    <th>S</th>
+                    <th>M</th>
+                    <th>T</th>
+                    <th>W</th>
+                    <th>T</th>
+                    <th>F</th>
+                    <th>S</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -95,9 +95,9 @@ export default class CalendarMain extends React.Component {
                                             <td className={`${styleOfDays[i]} ${this.props.today&&today===day?'today':''}`}
                                                 onClick={
                                                     this.handleDatePick.bind
-                                                    (this, i, styleOfDays[i],day,rowsInMonth)}
+                                                    (this,styleOfDays[i],day)}
                                                 key={i++}>
-                                                {day}
+                                                <span>{day}</span>
                                             </td>
                                         )
                                     })

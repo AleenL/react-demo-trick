@@ -1,7 +1,7 @@
 import React from 'react'
 import CalendarHeader from './CalendarHeader'
 import CalendarMain from './CalendarMain'
-import CalendarFooter from './CalendarFooter'
+import '../../../../public/css/date/index.pcss'
 
 const displayDaysPerMonth = (year)=> {
 
@@ -162,31 +162,22 @@ export default class Calendar extends React.Component {
         return (
 
             <div className="output" id='calendarContainer'>
-                <div className="star1"></div>
-                <div className="star2"></div>
-                <div className="star3"></div>
-                <p className="datePicked"
-                   onClick={this.datePickerToggle.bind(this)}>
-                    {props.datePicked}
-                </p>
-                <div className="main" ref="main">
-                    <CalendarHeader prevMonth={this.prevMonth.bind(this)}
-                                    nextMonth={this.nextMonth.bind(this)}
-                                    year={this.state.year}
-                                    month={this.state.month}
-                                    day={this.state.day}/>
-                    <CalendarMain {...props}
-                                  prevMonth={this.prevMonth.bind(this)}
-                                  nextMonth={this.nextMonth.bind(this)}
-                                  datePick={this.datePick.bind(this)}
-                                  year={this.state.year}
-                                  month={this.state.month}
-                                  day={this.state.day}
-                                  today={this.state.today}/>
-
-                    <CalendarFooter
-                        picked={this.picked.bind(this)}
-                        datePickerToggle={this.datePickerToggle.bind(this)}/>
+                <div className="dateBox">
+                    <div className="main" ref="main">
+                        <CalendarHeader prevMonth={this.prevMonth.bind(this)}
+                                        nextMonth={this.nextMonth.bind(this)}
+                                        year={this.state.year}
+                                        month={this.state.month}
+                                        day={this.state.day}/>
+                        <CalendarMain {...props}
+                                      prevMonth={this.prevMonth.bind(this)}
+                                      nextMonth={this.nextMonth.bind(this)}
+                                      datePick={this.datePick.bind(this)}
+                                      year={this.state.year}
+                                      month={this.state.month}
+                                      day={this.state.day}
+                                      today={this.state.today}/>
+                    </div>
                 </div>
             </div>
         )

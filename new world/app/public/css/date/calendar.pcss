@@ -1,0 +1,93 @@
+#calendarContainer{
+  width:100%;
+  height:100vh;
+  background:url('../../../public/image/date-background.png') center no-repeat;
+  background-size: cover;
+  position: relative;
+  .dateBox{
+    position: absolute;
+    width:100%;
+    height:70vh;
+    background: rgba(255,255,255,1);
+    top:0;
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
+    .calendarHeader{
+      width:100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding:1rem 1rem;
+      .dateInfo{
+        font-size: 1.5rem;
+        font-weight: 900;
+        color:rgb(183,163,228);
+      }
+      .prev,.next{
+        width:1rem;
+        height:1rem;
+        background:url('../../../public/image/monthButton.png') center no-repeat;
+        background-size: cover;
+      }
+      .next{
+        transform: rotate(180deg);
+      }
+    }
+    .datePicked{
+      text-align: center;
+    }
+    .main{
+      .calendarMain{
+        width:100%;
+       thead{
+         tr{
+           th{
+             display: table-cell;
+             text-align: center;
+             height:8vh;
+             color:rgb(208,209,230);
+             font-weight: 900;
+             &:last-child,&:first-child{
+               color:rgb(248,195,231)
+             }
+           }
+         }
+       }
+        tbody{
+          tr{
+            td{
+              display: table-cell;
+              text-align: center;
+              height:5vh;
+              width:2rem;
+              color:rgb(183,163,228);
+              font-weight: 900;
+              &:last-child,&:first-child{
+                color:rgb(248,195,231)
+              }
+              &.prevMonth{
+                color:#ccc;
+              }
+              &.nextMonth{
+                color:#ccc;
+              }
+              &.today span{
+                display: inline-block;
+                width:2rem;
+                height:2rem;
+                background: #b49ced;
+                border-radius: 2rem;
+                line-height: 2rem;
+                color:#f0f0f0
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
