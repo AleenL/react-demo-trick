@@ -1,7 +1,9 @@
 import React from 'react'
 import CalendarHeader from './CalendarHeader'
 import CalendarMain from './CalendarMain'
+import Header from './header'
 import '../../../../public/css/date/index.pcss'
+import {getCurretUser} from "../../../../public/js/leanCloud";
 
 const displayDaysPerMonth = (year)=> {
 
@@ -60,11 +62,24 @@ export default class Calendar extends React.Component {
         super()
         let now = new Date()
         this.state = {
+            user:{
+                attributes:{
+                    username:''
+                },
+                id:''
+            },
+
             year: now.getFullYear(),
             month: now.getMonth(),
             day: now.getDate(),
             picked: false,
             today:true
+        }
+    }
+
+    componentDidMount(){
+        if(getCurretUser()){
+            this.setState({user:getCurretUser()})
         }
     }
 
@@ -159,24 +174,28 @@ export default class Calendar extends React.Component {
                    ${this.state.month + 1} 月
                    ${this.state.day} 日`
         }
+
+        const {user,year,month,day,today} = this.state
+        const {attributes,id} = user
         return (
 
             <div className="output" id='calendarContainer'>
                 <div className="dateBox">
+                    <Header user={attributes.username}/>
                     <div className="main" ref="main">
                         <CalendarHeader prevMonth={this.prevMonth.bind(this)}
                                         nextMonth={this.nextMonth.bind(this)}
-                                        year={this.state.year}
-                                        month={this.state.month}
-                                        day={this.state.day}/>
+                                        year={year}
+                                        month={month}
+                                        day={day}/>
                         <CalendarMain {...props}
                                       prevMonth={this.prevMonth.bind(this)}
                                       nextMonth={this.nextMonth.bind(this)}
                                       datePick={this.datePick.bind(this)}
-                                      year={this.state.year}
-                                      month={this.state.month}
-                                      day={this.state.day}
-                                      today={this.state.today}/>
+                                      year={year}
+                                      month={month}
+                                      day={day}
+                                      today={today}/>
                     </div>
                 </div>
             </div>

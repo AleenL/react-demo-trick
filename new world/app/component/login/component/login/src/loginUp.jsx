@@ -1,32 +1,32 @@
 import React from 'react';
 import {signUp,logOut,getCurretUser} from '../../../../../public/js/leanCloud'
-
+import {browserHistory} from 'react-router-dom'
 
 class LoginUp extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            user:getCurretUser() || 'ddd',
+            user:getCurretUser() || null,
             formData:{
                 username:'',
                 password:''
-            }
+            },
+            error:null
         }
     }
 
     signUp(e){
         e.preventDefault()
+
         let {username, password} = this.state.formData
-
-        let success = (user) => {this.getUser(user)}
-        let error = (error) => {console.log(error)}
-
+        let success = () => {this.getUser()}
+        let error = (error) => {this.setState({error:error.code})}
         signUp(username,password,success,error)
 
     }
 
-    getUser(user){
-        this.setState({user:user})
+    getUser(){
+        browserHistory.push('/date')
     }
 
 
@@ -41,6 +41,7 @@ class LoginUp extends React.Component{
     }
 
 
+
     render(){
         return(
             <div className='sign-wrapper signUp-wrapper'>
@@ -48,7 +49,6 @@ class LoginUp extends React.Component{
                     <p className='people image vibrate-1' />
                     <p className='moon image slide-bottom' />
                 </div>
-                <h3>{this.state.user}</h3>
                 <p onClick={this.logOut.bind(this)}>登出</p>
                 <form className="signUp" onSubmit={this.signUp.bind(this)}>
                     <div className="row">
@@ -66,9 +66,9 @@ class LoginUp extends React.Component{
                         />
                     </div>
                     <div className="row actions">
-                        <button type="submit">登录</button>
+                        <button  type="submit">登录</button>
                     </div>
-                    <p className='forget'></p>
+                    <p className='forget'/>
                 </form>
             </div>
         )

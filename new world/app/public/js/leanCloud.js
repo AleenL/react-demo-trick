@@ -60,8 +60,7 @@ export function getCurretUser(){
 }
 
 function getUserFromAVUser(AVUser){
-    console.log(AVUser)
-    return AVUser.id
+    return AVUser
 }
 
 export const setTodo = (list) => {

@@ -15,20 +15,47 @@
     justify-content: flex-start;
     align-content: center;
     flex-direction: column;
+    .userHeader{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding:1.5rem 1rem .5rem 1rem;
+      .avatar{
+        width:2.5rem;
+        height:2.5rem;
+        border-radius: 2.5rem;
+        overflow: hidden;
+        img{
+          border-radius: 2rem;
+        }
+      }
+      .userInfo{
+        margin-left: 1rem;
+        p:first-child{
+          font-size: .67rem;
+          padding-bottom: 1rem;
+        }
+        p:nth-child(2){
+          font-size:.48rem;
+          color:#778CDB;
+          letter-spacing: .1rem;
+        }
+      }
+    }
     .calendarHeader{
       width:100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding:1rem 1rem;
+      padding:.5rem 2rem;
       .dateInfo{
-        font-size: 1.5rem;
+        font-size: .84rem;
         font-weight: 900;
         color:rgb(183,163,228);
       }
       .prev,.next{
-        width:1rem;
-        height:1rem;
+        width:.5rem;
+        height:.5rem;
         background:url('../../../public/image/monthButton.png') center no-repeat;
         background-size: cover;
       }
@@ -41,15 +68,15 @@
     }
     .main{
       .calendarMain{
-        width:100%;
+        width:80%;
+        margin: 0 auto;
        thead{
          tr{
            th{
              display: table-cell;
              text-align: center;
-             height:8vh;
+             height:5vh;
              color:rgb(208,209,230);
-             font-weight: 900;
              &:last-child,&:first-child{
                color:rgb(248,195,231)
              }
@@ -61,12 +88,11 @@
             td{
               display: table-cell;
               text-align: center;
-              height:5vh;
+              height:4vh;
               width:2rem;
               color:rgb(183,163,228);
-              font-weight: 900;
               &:last-child,&:first-child{
-                color:rgb(248,195,231)
+                color:#ea80ac;
               }
               &.prevMonth{
                 color:#ccc;
@@ -76,11 +102,11 @@
               }
               &.today span{
                 display: inline-block;
-                width:2rem;
-                height:2rem;
+                width:1rem;
+                height:1rem;
                 background: #b49ced;
-                border-radius: 2rem;
-                line-height: 2rem;
+                border-radius: 1rem;
+                line-height: 1rem;
                 color:#f0f0f0
               }
             }

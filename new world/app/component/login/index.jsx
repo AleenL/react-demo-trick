@@ -11,7 +11,7 @@ const Index = () =>
     <HashRouter>
         <div className="content">
             <Route exact path="/"
-                   render={() => (<Redirect to={getCurretUser() ? '/todo' : '/loginUp'}/>)}/>
+                   render={() => (<Redirect to={getCurretUser() ? '/date' : '/'}/>)}/>
             <Route path="/login" component={()=> <UserDialog/>}/>
             <Route path="/loginIn" component={()=> <LoginIn/>}/>
             <Route path="/loginUp" component={()=> <LoginUp/>}/>

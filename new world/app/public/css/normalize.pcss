@@ -1130,3 +1130,85 @@ button.swiper-pagination-bullet {
     transform: rotate(360deg);
   }
 }
+
+html {font-size: 50px}
+body {font-size: 50px;background: #fff}
+@media screen and (min-width: 320px) {
+  html {font-size: 21.333333333333332px;}
+  body {font-size: 12px;}
+}
+@media screen and (min-width: 360px) {
+  html {font-size: 24px;}
+  body {font-size: 12px;}
+}
+@media screen and (min-width: 375px) {
+  html {font-size: 25px;}
+  body {font-size: 12px;}
+}
+@media screen and (min-width: 384px) {
+  html {font-size: 25.6px;}
+  body {font-size: 14px;}
+}
+@media screen and (min-width: 400px) {
+  html {font-size: 26.666666666666668px;}
+  body {font-size: 14px;}
+}
+@media screen and (min-width: 414px) {
+  html {font-size: 27.6px;}
+  body {font-size: 14px;}
+}
+@media screen and (min-width: 424px) {
+  html {font-size: 28.266666666666667px;}
+  body {font-size: 14px;}
+}
+@media screen and (min-width: 480px) {
+  html {font-size: 32px;}
+  body {font-size: 15.36px;}
+}
+@media screen and (min-width: 540px) {
+  html{font-size: 36px;}
+  body{font-size: 17.28px;}
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: '';
+}
+
+.clearfix:after {
+  clear: both;
+  zoom: 1;
+}
+
+//global button
+button[type="submit"],
+input[type="submit"] {
+  &:enabled:active {
+    background-color: #929292;
+  }
+}
+
+//1px border
+.bdr-btm,
+.bdr-btm {
+  position: relative;
+}
+
+.bdr-top::before {
+  @include brdCom(top, #ddd);
+}
+
+.bdr-btm::after {
+  @include brdCom(bottom, #ddd)
+  }
+
+input[type="text"],
+button{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.content{
+  height:100vh;
+  overflow: hidden;
+}
