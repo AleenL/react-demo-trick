@@ -1,0 +1,183 @@
+.play-box{
+  position: fixed;
+  bottom:0;
+  width:100%;
+  height:13vh;
+  background: #fff;
+  box-shadow: 0 0 10rpx #ccc;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.song-image{
+  width:90rpx;
+  height:90rpx;
+  margin-left:30rpx;
+  position: relative
+}
+
+.home-btn{
+  width:60rpx;
+  height:60rpx;
+}
+.song-image .song-image-cover{
+  width:90rpx;
+  height:90rpx;
+  border-radius: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.song-image .song-image-btn{
+  width:90rpx;
+  height:90rpx;
+  position: absolute;
+  top:0;
+  left:0;
+  opacity: .7;
+  
+
+}
+
+.song-image .song-image-btn.play{
+  background: url('http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/play.png') no-repeat center;
+  background-size: cover;
+}
+.song-image .song-image-btn.pause{
+  background: url('http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/pause.png') no-repeat center;
+  background-size: cover;
+}
+
+.play-info{
+  margin-left:30rpx;
+  width:550rpx;
+}
+.song-title{
+  display: block;
+  color:#515151;
+  font-size: 32rpx;
+}
+.song-anther{
+  color:#919191;
+  font-size: 24rpx;
+}
+.music-bar{
+  position: absolute;
+  top:-3rpx;
+  width:100%;
+  border-bottom:16rpx solid #ccc;
+}
+.bar-progress{
+  position: absolute;
+  top:0rpx;
+  border-bottom:16rpx solid #DE5145;
+}
+.net-progress{
+  position: absolute;
+  top:0rpx;
+  border-bottom:16rpx solid #DE5145;
+  opacity: .2;
+}
+.anther-info{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.play-time{
+  color:#919191;
+  font-size: 24rpx;
+}
+
+.play-radio{
+  width:30rpx;
+  height:30rpx;
+  border-radius: 100%;
+  background: #DE5145;
+  position: absolute;
+  top:-7rpx;
+}
+.list-items{
+  width:600rpx;
+  height:400px;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50rpx;
+  background: #fff;
+  margin-left: 50rpx;
+  position: relative
+}
+
+.timeAxis{
+  width:100%;
+  height:87vh;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.time-content{
+ transition: all .5s ease;
+ border-left:6rpx solid #ccc;
+ margin-left:50rpx;
+ padding-top: 50rpx;
+}
+
+.list-items .list-item-icon{
+  width:20rpx;
+  height:20rpx;
+  background: #DE5145;
+  border-radius: 100%;
+  position: absolute;
+  left:-60rpx;
+  top:50%;
+  margin-top: -10rpx;
+}
+
+.list-items .list-title{
+  font-size:32rpx;
+  text-align: left;
+  width:80%;
+  line-height: 1.2;
+  padding-top:20rpx;
+  color:#515151;
+}
+
+.list-items .image-title{
+  width:80%;
+  padding:30rpx 30rpx;
+}
+.list-items .link-text{
+  width: 80%;
+  font-size: 26rpx;
+  line-height: 1.4;
+  margin-top: 10rpx;
+  color:#919191;
+}
+
+.goPlay{
+  color:#a1a1a1;
+  position: absolute;
+  bottom:40rpx;
+  right:40rpx;
+  font-size: 26rpx;
+  text-decoration: underline;
+}
+
+.background-music-cover{
+  height:90vh;
+  width:120%;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: blur(5px); -moz-filter: blur(5px); filter: blur(5px); 
+  margin-left: -30rpx;
+  margin-top: -30rpx;
+}
+.background-dark{
+  height:87vh;
+  width:100%;
+  background: rgba(0,0,0,.4);
+  overflow: hidden;
+}

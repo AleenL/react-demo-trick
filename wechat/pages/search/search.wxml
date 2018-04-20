@@ -1,0 +1,62 @@
+<view wx:if="{{title.length>1}}" class='play-button'>
+    <text >正在播放:  {{title}}</text>
+</view>
+<view class="banner" bindtap='goSuggestion'>
+    <image src="{{banner.imgUrl}}" class="title-image" />
+    <image src="{{playBtn}}" class="play-button" />
+    <text class="time-show">{{banner.time[0]}}'{{banner.time[1]}}"</text>
+</view>
+<view class="bottom_link">
+    <view class="{{ selectArticle ? 'navigator-hover':'slide-image-link'}}" bindtap="selectedArticle">
+        <text class="link-title">投稿</text>
+    </view>
+    <view class="{{ selectVideo ? 'navigator-hover':'slide-image-link'}}" bindtap="selectedVideo">
+        <text class="link-title">电台</text>
+    </view>
+    <view class="{{ selectMusic ? 'navigator-hover':'slide-image-link'}}" bindtap="selectedMusic">
+        <text class="link-title">音乐</text>
+    </view>
+</view>
+
+<view class="{{selectArticle ? 'show':'hidden'}}" >
+    <block wx:for='{{Article}}' wx:key="{{index}}">
+        <view class="list-items">
+            <view class="image-title"  bindtap="goArticle" data-id='{{index}}'>
+                <view  class='background-music-cover' style="background-image: url({{item.imgUrl}})" >
+
+  </view>
+            </view>
+            <text class="link-title">{{item.title}}</text>
+            <text class="link-text">{{item.anther}}</text>
+        </view>
+
+    </block>
+</view>
+<view class="{{selectVideo ? 'show':'hidden'}}">
+    <block wx:for='{{Video}}' wx:key="{{index}}">
+        <view class="list-items">
+            <view class="image-title" bindtap="goMusic" data-id='{{index}}'>
+                <image src="{{item.imgUrl}}" data-id='{{index}}' class="slide-image" mode="widthFix"/>
+                <image src="{{playBtn}}" class="play-button" />
+            </view>
+            <text class="link-title">{{item.title}}</text>
+            <text class="link-text">{{item.text}}</text>
+        </view>
+    </block>
+</view>
+<view class="{{selectMusic ? 'show':'hidden'}}">
+<block wx:for='{{Music}}' wx:key="{{index}}">
+    <view class="list-items">
+        <view class="image-title" bindtap="goMusic" data-id='{{index}}'>
+            <image src="{{item.imgUrl}}" data-id='{{index}}' class="slide-image" mode="widthFix"/>
+            <image src="{{playBtn}}" class="play-button" />
+        </view>
+        <view class="sang-info">
+            <text class="link-title">{{item.title}}</text>
+            <text class="song-people">推荐人：{{item.people}}</text>
+        </view>
+
+        <text class="link-text">{{item.text}}</text>
+    </view>
+</block>
+</view>

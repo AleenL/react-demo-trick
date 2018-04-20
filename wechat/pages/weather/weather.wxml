@@ -1,0 +1,39 @@
+<view class='swiper'>
+    <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange"  circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
+    <block wx:for='{{imgUrls}}' wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item.url}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad"/>
+      </swiper-item>
+      </block>
+    </swiper>
+</view>
+
+<view class="center_content">
+<block wx:for='{{centerContentLink}}' wx:key="{{index}}">
+    <navigator url="{{item.link}}" class="slide-image-link" hover-class="navigator-hover">
+        <image src="{{item.url}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad"/>
+        <text class="link-title">{{item.text}}</text>
+    </navigator>
+</block>
+</view>
+
+<view class="center_bottom">
+<block wx:for='{{centerBottomContentLink}}' wx:key="{{index}}">
+    <navigator url="{{item.link}}" class="slide-image-link" hover-class="navigator-hover">
+        <text class="link-title">{{item.text}}</text>
+        <image src="{{item.url}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad"/>
+    </navigator>
+</block>
+</view>
+
+<view class="bottom_link">
+    <view class="{{ selectNew ? 'navigator-hover':'slide-image-link'}}" bindtap="selectedNew">
+        <text class="link-title">刚刚发布</text>
+    </view>
+    <view class="{{ selectLong ? 'navigator-hover':'slide-image-link'}}" bindtap="selectedLong">
+        <text class="link-title">附近最热</text>
+    </view>
+</view>
+<view class="{{selectNew?'show':'hidden'}}" >for system</view>
+<view class="{{selectLong?'show':'hidden'}}">for activity</view>
+<button class="button-style" type="primary" bindtap="listenerButtonPause">暂停</button>

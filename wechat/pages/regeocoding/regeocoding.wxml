@@ -1,0 +1,48 @@
+<scroll-view wx:if="{{style=='video'}}" class="timeAxis" scroll-top='{{transfrom*420}}' scroll-y='true' scroll-with-animation='true'>
+  <view class='time-content' >
+  <block wx:for='{{timeAxis}}' wx:key="{{index}}" >
+      <view class="list-items">
+          <text class='list-title'>{{item.title}}</text>
+          <image src="{{item.imageUrl}}" data-id='{{index}}' class="image-title" mode="widthFix"/>
+          <text class="link-text">{{item.text}}</text>
+          <view class='list-item-icon'></view>
+          <view class='goPlay' bindtap='goPlay' data-time='{{item.time}}'>
+            <text>
+              听这段
+            </text>
+          </view>
+      </view>
+  </block>
+  </view>
+</scroll-view>
+
+<view wx:if="{{style=='music'}}"  class='background-dark'>
+  <view  class='background-music-cover' style="background-image: url({{playlist.coverImgUrl}})" >
+
+  </view>
+</view>
+
+
+<view class="play-box">
+  <view class="song-image" bindtap="playBtn">
+    <view class="song-image-cover"   style="background-image: url({{playlist.coverImgUrl}})"/>
+    <view wx:if="{{play}}" class="song-image-btn pause" />
+    <view wx:else class="song-image-btn play" />
+  </view>
+  <view class="play-info">
+    <view class='anther-info'>
+    <text class="song-title" bindtap="listenerButtonGetPlayState">{{playlist.title}}</text>
+    <image src="http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/music/barrage.png" class="home-btn" bindtap="goHome"/>
+    </view>
+    <view class='anther-info'>
+      <text class="song-anther">{{playlist.anther}}</text>
+      <text class='play-time'>{{time}}</text>
+    </view>
+  </view>
+  <view class='music-bar' bindtap="playPosition">
+    <view class='bar-progress' style="width: {{progress+1}}%"/>
+    <view class='net-progress' style='width: {{netProgress+1}}%'></view>
+    <view class='play-radio' style='left: {{progress}}%'  ></view>
+  </view>
+</view>
+

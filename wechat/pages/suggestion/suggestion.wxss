@@ -1,0 +1,50 @@
+.title_background{
+  width:100%;
+  height:400rpx;
+  background-position: center;
+  background-size: cover;
+  position: relative
+}
+.title_background .cover-background{
+  width:100%;
+  height:400rpx;
+  background: rgba(0,0,0,.5);
+  position: absolute;
+  top:0;
+  left:0;
+}
+.aritcle_title{
+  display: block;
+  text-align: center;
+  padding:20rpx;
+  font-size: 45rpx;
+  color:#515151;
+  width:90%;
+  border-bottom:1px solid #919191;
+  margin: 0 auto;
+}
+.aritcle_anther{
+  text-align: center;
+  display: block;
+  margin:10rpx auto;
+  font-size: 35rpx;
+  color:#919191;
+}
+
+.aritcle_content{
+  margin-top: 30rpx;
+  font-size: 27rpx;
+  text-indent: 50rpx;
+}
+
+.aritcle_text{
+  width:90%;
+  margin: 10rpx auto;
+}
+
+.aritcle_photo{
+  width:100%;
+  height:400rpx;
+  background-position: center;
+  background-size: cover;
+}

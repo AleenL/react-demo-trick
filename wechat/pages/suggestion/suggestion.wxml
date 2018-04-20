@@ -1,0 +1,20 @@
+<view class="title_background" style="background-image: url({{text.first_jpg}})">
+ <view class='cover-background'></view>
+</view>
+
+<view class='aritcle_title'>
+ <text>{{text.title}}</text>
+</view>
+
+<view class='aritcle_anther'>
+  <text>作者：{{text.anther}}</text>
+</view>
+
+<view class="aritcle_content" >
+    <block wx:for='{{text.content}}'  wx:key="{{index}}">
+      <view class='aritcle_text' wx:if="{{item[1]==='text'}}" >
+        <text>{{item[0]}}</text>
+      </view>
+      <view wx:else class='aritcle_photo' style="background-image: url({{item[0]}})"></view>
+    </block>
+</view>

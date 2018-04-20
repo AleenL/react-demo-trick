@@ -1,0 +1,16 @@
+{
+  "pages":[
+    
+    "pages/search/search",
+    "pages/regeocoding/regeocoding",
+    "pages/suggestion/suggestion",
+    "pages/weather/weather"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#DE5145",
+    "navigationBarTitleText": "翻转电台",
+    "navigationBarTextStyle":"#fff",
+    "backgroundColor": "#DE5145"
+  }
+}

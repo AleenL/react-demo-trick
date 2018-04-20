@@ -1,0 +1,136 @@
+.banner{
+    position: relative;
+}
+.banner .title-image{
+    width:100%;
+}
+.banner .play-button{
+    width:5rem;
+    height:5rem;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-top:-2.5rem;
+    margin-left:-2.5rem;
+}
+.banner .time-show{
+    position: absolute;
+    left:1rem;
+    bottom:1rem;
+    color:#fff;
+    font-size: .8rem;
+}
+.list-items{
+    width:100%;
+    margin: .9rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.list-items .image-title{
+    position: relative;
+    width: 90%;
+}
+.list-items .image-title .slide-image{
+    width:100%;
+    height:4rem;
+}
+.list-items .image-title .play-button{
+    width:3rem;
+    height:3rem;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-1.5rem;
+    margin-left:-1.5rem;
+}
+
+.list-items .link-title{
+    font-size: 26rpx;
+    color: #515151;
+    text-align: left;
+    width:100%;
+    text-indent: 40rpx;
+}
+
+.list-items .sang-info{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.list-items .sang-info .song-people{
+    font-size: 24rpx;
+    color:#DE5145;
+    width:400rpx;
+    padding-right:40rpx;
+    text-align: right;
+}
+
+.list-items .link-text{
+    font-size: 24rpx;
+    color: #919191;
+    text-align: left;
+    width:90%;
+    text-indent: 6rpx;
+    line-height: 2;
+    border-bottom: 1px solid #d6d6d9;
+}
+
+
+.hidden{
+    display:none;
+}
+.show{
+    display: block;
+}
+.bottom_link {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:2rpx solid #f0f0f0;
+}
+
+.bottom_link .slide-image-link,.bottom_link .navigator-hover{
+    height:70rpx;
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-size: 26rpx;
+
+}
+.background-music-cover{
+  width:100%;
+  height:350rpx;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+.bottom_link .slide-image-link .link-title,.bottom_link .navigator-hover .link-title{
+    border-bottom: 5rpx solid #fff;
+    width:150rpx;
+    text-align: center;
+    line-height: 65rpx;
+}
+.bottom_link  .navigator-hover .link-title{
+    border-bottom: 5rpx solid #DE5145;
+    color:#DE5145;
+}
+
+
+
+.play-button{
+  height:70rpx;
+  display: flex;
+  text-indent: 30rpx;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 26rpx;
+  color:#DE5145;
+  opacity: .7;
+}
