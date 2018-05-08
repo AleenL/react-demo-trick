@@ -1,8 +1,8 @@
-# Jason's resume
+# Allen's resume
+(原作者：[https://ijason.cc](https://ijason.cc))
 
-> My resume powered by vue.js and deploy on ijason.cc
+> My resume powered by vue.js
 
-Website: [https://ijason.cc](https://ijason.cc)
 
 ## Build Setup
 
@@ -25,3 +25,6 @@ npm test
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 # resume
+
+
+hope have a nice day!!

@@ -1,0 +1,160 @@
+/*公共样式变量*/
+/*//$themgColor: #FC345C;*/
+/*字体颜色*/
+.color_ff{
+  color: #ffffff;
+}
+.color_f7{
+  color: #F77F4F;
+}
+.color_12{
+  color: #121C32;
+}
+.color_9b{
+  color: #9B9B9B;
+}
+.color_4a{
+  color: #4A4A4A;
+}
+.color_bb{
+  color: #bbbbbb;
+}
+.color_51{
+  color: #515151;
+}
+/*背景颜色*/
+.bg_ff{
+  background-color: #ffffff;
+}
+.bg_f2{
+  background-color: #f2f2f2;
+}
+/*页面布局*/
+.flex_row{
+  flex-direction: row;
+}
+.flex_column{
+  flex-direction: column;
+}
+.flex_item{
+  flex: 1;
+}
+.justify_center{
+  justify-content: center;
+}
+.justify_start{
+  justify-content: flex-start;
+}
+.justify_end{
+  justify-content: flex-end;
+}
+.justify_between{
+  justify-content: space-between;
+}
+.justify_around{
+  justify-content: space-around;
+}
+.align_start{
+  align-items: flex-start;
+}
+.align_end{
+  align-items: flex-end;
+}
+.align_center{
+  align-items: center;
+}
+.t_left{
+  text-align: left;
+}
+.t_center{
+  text-align: center;
+}
+.t_right{
+  text-align: right;
+}
+/*字体大小*/
+.font_10{
+  font-size: 20px;
+}
+.font_12{
+  font-size: 24px;
+}
+.font_14{
+  font-size: 28px;
+}
+.font-size16{
+  font-size: 32px;
+}
+.font_18{
+  font-size: 36px;
+}
+.font_20{
+  font-size: 40px;
+}
+.font_22{
+  font-size: 44px;
+}
+/*粗字体*/
+.font_weight{
+  font-weight: bold;
+}
+/*padding*/
+.p_left24{
+  padding-left: 24px;
+}
+.p_top30{
+  padding-top: 30px;
+}
+.p_bottom30{
+  padding-bottom: 30px;
+}
+.p_lr20{
+  padding: 0px 24px;
+}
+.p_b20{
+  padding-bottom: 20px;
+}
+.p_t20{
+  padding-top: 20px;
+}
+.p_l20{
+  padding-left: 20px;
+}
+.p_r20{
+  padding-right: 20px;
+}
+.p_tb{
+  padding: 24px 0px;
+}
+.p_20{
+  padding: 24px;
+}
+/*间距margin*/
+.m_top30{
+  margin-top: 30px;
+}
+/*边框border*/
+.border_b{
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #eeeeee;
+}
+.border_t{
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #eeeeee;
+}
+.border_l{
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #eeeeee;
+}
+.border_r{
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #eeeeee;
+}
+/*行高lineheight*/
+.line-height80{
+  line-height: 80px;
+}

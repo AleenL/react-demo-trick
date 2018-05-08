@@ -1,0 +1,100 @@
+// appBoard，mediator 不建议进行修改 如果修改了 也请对应修改
+module.exports = {
+    'exports': [
+        // appBoard 
+        "js/config/index.js",
+        // mediator
+        "js/mediator/index.vue",
+        // home
+        'js/pages/youdianSeller/index.vue',
+        'js/pages/youdianSeller/accountManage/index.vue',
+        'js/pages/youdianSeller/accountManage/passwordEdit.vue',
+        'js/pages/youdianSeller/accountReceivables/index.vue',
+        'js/pages/youdianSeller/accountReceivables/qualificationsinfo.vue',
+        'js/pages/youdianSeller/accountReceivables/addarInfo.vue',
+        'js/pages/youdianSeller/chooseProvince/index.vue',
+        'js/pages/youdianSeller/chooseProvince/chooseCity.vue',
+        'js/pages/youdianSeller/areaManage/index.vue',
+        'js/pages/youdianSeller/areaManage/addRegion.vue',
+        'js/pages/youdianSeller/billList/index.vue',
+        'js/pages/youdianSeller/billList/billInfo.vue',
+        'js/pages/youdianSeller/billList/chooseTime.vue',
+        'js/pages/youdianSeller/chooseAddress/index.vue',
+        "js/pages/youdianSeller/chooseWeek/index.vue",
+        "js/pages/youdianSeller/chooseDate/index.vue",
+        "js/pages/youdianSeller/chooseGoods/index.vue",
+        'js/pages/youdianSeller/classifyGoods/index.vue',
+        'js/pages/youdianSeller/classifyGoods/addClassify.vue',
+        'js/pages/youdianSeller/couponManage/index.vue',
+        'js/pages/youdianSeller/couponManage/addCouponinfo.vue',
+        'js/pages/youdianSeller/couponManage/couponinfo.vue',
+        'js/pages/youdianSeller/couponManage/sendCoupan.vue',
+        'js/pages/youdianSeller/discountManage/index.vue',
+        'js/pages/youdianSeller/discountManage/chooseDiscountType.vue',
+        'js/pages/youdianSeller/discountManage/createDiscount.vue',
+        'js/pages/youdianSeller/employeeManage/index.vue',
+        'js/pages/youdianSeller/employeeManage/addEmployee.vue',
+        'js/pages/youdianSeller/goodsManage/index.vue',
+        'js/pages/youdianSeller/goodsManage/editGoods.vue',
+        'js/pages/youdianSeller/goodsManage/editGoodsItem.vue',
+        'js/pages/youdianSeller/gradeManage/index.vue',
+        'js/pages/youdianSeller/gradeManage/addJob.vue',
+        'js/pages/youdianSeller/gradeManage/editJob.vue',
+        'js/pages/youdianSeller/home/index.vue',
+        'js/pages/youdianSeller/integralManage/index.vue',
+        'js/pages/youdianSeller/memberManage/index.vue',
+        'js/pages/youdianSeller/memberManage/userInfo.vue',
+        'js/pages/youdianSeller/memberOrder/index.vue',
+        'js/pages/youdianSeller/memberOrder/orderInfo.vue',
+        'js/pages/youdianSeller/orderManage/index.vue',
+        'js/pages/youdianSeller/regist/index.vue',
+        'js/pages/youdianSeller/regist/accountInfoForm.vue',
+        'js/pages/youdianSeller/regist/merchantInfoForm.vue',
+        'js/pages/youdianSeller/regist/sendCode.vue',
+        'js/pages/youdianSeller/saveMoney/index.vue',
+        'js/pages/youdianSeller/saveMoney/addRule.vue',
+        'js/pages/youdianSeller/signIn/index.vue',
+        'js/pages/youdianSeller/statistics/index.vue',
+        'js/pages/youdianSeller/storeInfo/index.vue',
+        'js/pages/youdianSeller/storeInfo/storeInfoEdit.vue',
+        'js/pages/youdianSeller/storeList/index.vue',
+        'js/pages/youdianSeller/storeList/accountEdit.vue',
+        'js/pages/youdianSeller/storeList/accountNameEdit.vue',
+        'js/pages/youdianSeller/storeList/accountSet.vue',
+        'js/pages/youdianSeller/storeList/createStore.vue',
+        'js/pages/youdianSeller/storeSet/index.vue',
+        'js/pages/youdianSeller/systemGoods/index.vue',
+        'js/pages/youdianSeller/tableManage/index.vue',
+        'js/pages/youdianSeller/tableManage/addTables.vue',
+        'js/pages/youdianSeller/vipCardList/index.vue',
+        'js/pages/youdianSeller/vipCardList/addVipCard.vue',
+        'js/pages/youdianSeller/vipCardList/ChooseTime.vue',
+        'js/pages/youdianSeller/vipCardList/vipCardInfo.vue',
+        'js/pages/youdianSeller/main.vue'
+    ],
+    'alias': {
+        'Components': 'js/components',
+        'Common': 'js/common',
+        'Config': 'js/config',
+        'Widget': 'js/widget',
+        'Pages': 'js/pages',
+        'Utils': 'js/utils'
+    },
+    'eslint': false,
+    'diff': {
+        'pwd': '/Users/yangmingzhe/Work/opensource/eros-diff-folder',
+        'proxy': 'https://app.weex-eros.com/source'
+    },
+    'server': {
+        'path': './',
+        'port': 8889
+    },
+    'mockServer': {
+        'port': 52077,
+        'mockDir': './dist/mock'
+    },
+    'socketServer': {
+        'port': 8890,
+        'switch': true
+    }
+}
